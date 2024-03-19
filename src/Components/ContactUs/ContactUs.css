@@ -1,0 +1,38 @@
+.contactUs {
+  padding: 6rem 0rem;
+  width: 100%;
+  position: relative;
+}
+.contactUs .overlay {
+  position: absolute;
+  left: 0;
+  bottom: 60%;
+  width: 120%;
+  height: 270px;
+  background: #000000;
+  /* transform-origin: top left; */
+  transform: rotate(-8deg);
+  z-index: 1;
+  /* box-shadow: 0 0 1px 0 #FFFFFF inset, 0 0 1px 0 #FFFFFF; */
+  border-top: 1px solid #8e793e;
+}
+
+.contactUs-main {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.contactUs-left {
+  color: white;
+}
+
+@media (min-width: 1200px) {
+  .contactUs-main {
+    max-width: 1140px;
+  }
+}

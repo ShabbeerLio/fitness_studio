@@ -1,0 +1,22 @@
+.Enquiry {
+  padding: 6rem 0rem;
+  width: 100%;
+  position: relative;
+  background-image: url(../../Assets/Enquiry/services.jpg);
+  background-color: #cccccc;
+  background-size: cover;
+  background-position: center center;
+}
+.Enquiry-main {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 1200px) {
+  .Enquiry-main {
+    max-width: 1140px;
+  }
+}
