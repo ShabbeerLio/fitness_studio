@@ -1,40 +1,47 @@
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
 import "./Enquiry.css"
+import ScrollReveal from 'scrollreveal'
+import { FaLocationDot, FaPhone, FaEnvelope ,FaClock } from "react-icons/fa6";
+
 
 const Enquiry = () => {
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [message, setMessage] = useState('');
+    useEffect(() => {
+        const sr = ScrollReveal({
+            origin: 'left',
+            distance: '100px',
+            duration: 2000,
+            reset: true,
+        });
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        // Handle form submission (e.g., send data to backend or display a message)
-        console.log({ name, email, message });
-        // Reset form fields
-        setName('');
-        setEmail('');
-        setMessage('');
-    };
+        sr.reveal('.enquiry-left', {})
+
+        return () => sr.destroy();
+    }, []);
 
     return (
         <div className='Enquiry'>
             <div className='Enquiry-main'>
-                <h2>Enquiry Form</h2>
-                <form onSubmit={handleSubmit}>
-                    <div>
-                        <label>Name:</label>
-                        <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
+                <div className="enquiry-left">
+                    <div className="enquiry-left-icon">
+                        <FaLocationDot />
+                        <p> Address: Gym Address, City, Country</p>
                     </div>
-                    <div>
-                        <label>Email:</label>
-                        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                    <div className="enquiry-left-icon">
+                        <FaPhone />
+                        <p> Phone: +91 7053054005</p>
                     </div>
-                    <div>
-                        <label>Message:</label>
-                        <textarea value={message} onChange={(e) => setMessage(e.target.value)} />
+                    <div className="enquiry-left-icon">
+                        <FaEnvelope />
+                        <p> Email: gym@example.com</p>
                     </div>
-                    <button type="submit">Submit</button>
-                </form>
+                    <div className="enquiry-left-icon">
+                        <FaClock  />
+                        <p> Time: 8:00 - 22:00 Mon-Sat</p>
+                    </div>
+                </div>
+                <div className="enquiry-right">
+
+                </div>
             </div>
         </div>
     );

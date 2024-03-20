@@ -11,19 +11,19 @@ import Enquiry from '../../Components/Enquiry/Enquiry'
 const Home = () => {
   return (
     <>
-    <Navbar />
+      <Navbar />
       <div className="home">
         <section className="Banner-box" id="home">
           <Banner />
         </section>
         <section className="section" id="about">
           <About />
-          <Gallery/>
+        </section>
+        <section className="section" id="gallery">
+          <Gallery />
         </section>
         <section className="section" id="contactUs">
           <ContactUs />
-        </section>
-        <section className="enquiry" id="enquiry">
           <Enquiry />
         </section>
       </div>

@@ -15,48 +15,48 @@
   gap: 2rem;
 }
 
+.about-gym{
+  position: absolute;
+  rotate: 90deg;
+  left: -20%;
+  top: 25%;
+  color: #fffbee1f;
+  font-size: 250px;
+  font-weight: 900;
+  z-index: 3;
+}
+
 .about-left {
     z-index: 3;
-  width: 65%;
+  width: 50%;
   padding: 0px 15px;
 }
 
 .about-title span {
-  font-size: 12px;
+  font-size: 20px;
   font-weight: 600;
   text-transform: uppercase;
   color: #8e793e;
   line-height: 0.75;
 }
 .about-title h2 {
+  /* text-transform: uppercase; */
   font-size: 60px;
-  font-weight: 200;
+  font-weight: 500;
   color: #ffffff;
   line-height: 1.1;
   margin-top: 3px;
-}
-.about-title h2 span {
-  font-size: 60px;
-  color: #ffffff;
-  line-height: 1.1;
-  margin-top: 3px;
-  font-weight: 600;
 }
 
 .about-detail p {
   font-size: 16px;
-  font-weight: 600;
+  /* font-weight: 200; */
   color: #ffffff;
   line-height: 1.75;
   margin-top: 35px;
+  color: gray;
 }
-.about-detail p:last-child {
-  font-size: 16px;
-  font-weight: 200;
-  color: #ffffff;
-  line-height: 1.75;
-  margin-top: 20px;
-}
+
 
 .about-button {
   display: flex;
@@ -70,7 +70,7 @@
   margin: 0;
   width: 190px;
   height: 43px;
-  border-radius: 22px;
+  border-radius: 5px;
   background: #8e793e;
   color: white;
   text-align: center;
@@ -92,18 +92,20 @@
   height: 100%;
   content: "";
   background: #ad974f;
-  border-radius: 20px;
+  border-radius: 5px;
   z-index: -1;
   transition: all 200ms ease;
 }
 
-/* .about-right {
-  width: 30%;
-} */
+.about-right {
+  width: 50%;
+  z-index: 3;
+}
 
 .about-right img {
-  /* rotate: 90deg; */
   width: 100%;
+  object-fit: contain;
+  aspect-ratio: 3/3;
 }
 
 .about_background {
@@ -166,7 +168,19 @@
 @media only screen and (max-width: 680px) {
   .about-main {
     gap: 0;
-    display: block;
+    /* display: block; */
+    padding-bottom: 10rem;
+  }
+
+  .about-gym{
+    position: absolute;
+    rotate: 90deg;
+    left: 0%;
+    top: 25%;
+    color: #fffbee1f;
+    font-size: 250px;
+    font-weight: 900;
+    z-index: 3;
   }
 
   .about-left,
@@ -183,5 +197,9 @@
 
   .about-main {
     max-width: 520px;
+  }
+
+  .about_image img{
+    width: 100%;
   }
 }

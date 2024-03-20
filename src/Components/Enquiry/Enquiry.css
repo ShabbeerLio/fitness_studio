@@ -1,12 +1,13 @@
 .Enquiry {
-  padding: 6rem 0rem;
+  /* padding: 6rem 0rem; */
   width: 100%;
   position: relative;
-  background-image: url(../../Assets/Enquiry/services.jpg);
+  background-image: url(../../Assets/Enquiry/Enquiry2.jpg);
   background-color: #cccccc;
   background-size: cover;
   background-position: center center;
 }
+
 .Enquiry-main {
   width: 100%;
   padding-right: 15px;
@@ -15,8 +16,48 @@
   margin-left: auto;
 }
 
+.enquiry-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 6rem 2rem;
+  width: 50%;
+  background-color: #8e793e;
+}
+
+.enquiry-left p {
+  font-size: 25px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.enquiry-left-icon{
+  display: flex;
+  align-items: flex-start;
+}
+.enquiry-left-icon svg{
+  color: white;
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+
 @media (min-width: 1200px) {
   .Enquiry-main {
     max-width: 1140px;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+
+  .Enquiry-main {
+    padding: 0;
+  }
+  .enquiry-left {
+    width: 100%;
+    align-items: baseline;
   }
 }

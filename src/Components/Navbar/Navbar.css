@@ -4,7 +4,7 @@
     top: 0;
     z-index: 9999;
     background-color: black;
-    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 4px 10px 0px rgba(254, 255, 199, 0.103);
 }
 
 .navbar {
@@ -113,14 +113,14 @@
     padding: 10px 0px !important;
     font-size: 17px;
     font-weight: 500;
-    color: white !important;
+    color: #ad974f !important;
     /* text-transform: capitalize; */
 }
 
 
 .nav-menu ul li a:hover {
-    color: #AD974F !important;
-    border-bottom: 1px solid #AD974F;
+    color: white !important;
+    /* border-bottom: 1px solid #AD974F; */
 }
 
 .call-number {
