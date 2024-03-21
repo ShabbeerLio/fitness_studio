@@ -1,6 +1,7 @@
 .Footer {
   border-top: 1px solid #ad974f;
   padding: 6rem 0rem;
+  padding-bottom: 0;
   width: 100%;
   background-color: black;
 }
@@ -17,6 +18,9 @@
   text-align: center;
   color: white;
   margin-bottom: 20px;
+}
+.footer-logo img{
+  width: 20%;
 }
 .footer-menu {
   width: 100%;
@@ -36,12 +40,11 @@
 
 .footer-menu ul li a {
   text-decoration: none;
-  color: white;
+  color: #8e793e;
   padding: 10px;
 }
 .footer-menu ul li a:hover {
-  border-bottom: 1px solid #8e793e;
-  color: #8e793e;
+  color: white;
 }
 
 .footer-search {
@@ -53,11 +56,11 @@
 
 .footer-search input {
   width: 100%;
-  border-radius: 30px;
+  border-radius: 5px;
   padding: 15px;
   padding-left: 30px;
   outline: none;
-  background-color: rgba(255, 255, 255, 0.219);
+  background-color: #121212;
   color: white;
   border: 1px solid #8e793e;
 }
@@ -68,7 +71,8 @@
   align-items: center;
   justify-content: center;
   margin: 0;
-  border-radius: 30px;
+  width: 20%;
+  border-radius: 0px 5px 5px 0px;
   background: #8e793e;
   color: white;
   text-align: center;
@@ -76,7 +80,7 @@
   cursor: pointer;
   font-size: 16px;
   font-weight: 500;
-  padding: 20px;
+  padding: 15px;
 }
 .footer-search p:before {
   position: absolute;
@@ -87,12 +91,38 @@
   height: 100%;
   content: "";
   background: #ad974f;
-  border-radius: 50px;
+  border-radius: 5px;
   z-index: -1;
   transition: all 200ms ease;
 }
 .footer-search p:hover:before {
-  width: 100%;
+  width: 50%;
+}
+
+.footer-contact{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-contact .call-number p a:hover{
+  color: #fff;
+}
+
+.footer-contact .instagram a{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+    margin: 0;
+    color: #AD974F;
+    font-size: 25px;
+    font-weight: 700;
+}
+.footer-contact .instagram a:hover{
+    color: #fff;
+}
+.footer-contact .instagram a p{
+  margin: 0;
 }
 
 .footer-copyright {
@@ -120,5 +150,18 @@
   .footer-copyright {
     display: block;
     text-align: end;
+    padding-bottom: 10px;
+  }
+
+  .footer-contact{
+    display: block;
+  }
+  .footer-contact .call-number{
+    display: flex !important;
+  }
+
+  .footer-contact .instagram a {
+    justify-content: center;
+    padding: 20px 0px;
   }
 }

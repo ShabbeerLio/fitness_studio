@@ -1,14 +1,33 @@
 .Enquiry {
-  /* padding: 6rem 0rem; */
+  padding: 6rem 0rem;
   width: 100%;
   position: relative;
+}
+
+.enquiry-background{
   background-image: url(../../Assets/Enquiry/Enquiry2.jpg);
   background-color: #cccccc;
   background-size: cover;
   background-position: center center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Apply overlay */
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.63); 
+  }
 }
 
 .Enquiry-main {
+  position: relative;
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
@@ -21,27 +40,41 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 6rem 2rem;
+  padding: 3rem;
   width: 50%;
+  border-radius: 5px;
   background-color: #8e793e;
 }
 
-.enquiry-left p {
-  font-size: 25px;
-  margin-bottom: 20px;
+.enquiry-left-icon p {
+  font-size: 20px;
+  margin-bottom: 25px;
   color: white;
 }
+.enquiry-left-icon a{
+  font-size: 20px;
+  /* margin-bottom: 20px; */
+  color: white;
+  text-decoration: none;
+}
 
-.enquiry-left-icon{
+.enquiry-left-icon a{
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+}
+.enquiry-left-icon {
+  width: 100%;
   display: flex;
   align-items: flex-start;
 }
 .enquiry-left-icon svg{
   color: white;
   display: flex;
+  width: 6%;
   align-items: center;
-  font-size: 25px;
-  margin-right: 10px;
+  font-size: 23px;
+  margin-right: 15px;
   margin-top: 5px;
 }
 

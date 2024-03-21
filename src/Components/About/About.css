@@ -1,13 +1,13 @@
 .aboutUs {
-  padding: 6rem 0rem;
+  /* padding: 6rem 0rem; */
   width: 100%;
   position: relative;
 }
 
 .about-main {
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  /* padding-right: 15px;
+  padding-left: 15px; */
   margin-right: auto;
   margin-left: auto;
   display: flex;
@@ -18,22 +18,23 @@
 .about-gym{
   position: absolute;
   rotate: 90deg;
-  left: -20%;
-  top: 25%;
+  left: -15%;
+  top: 18%;
   color: #fffbee1f;
-  font-size: 250px;
+  font-size: 230px;
   font-weight: 900;
-  z-index: 3;
+  z-index: 0;
 }
 
 .about-left {
     z-index: 3;
   width: 50%;
   padding: 0px 15px;
+  margin-left: 10%;
 }
 
 .about-title span {
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 600;
   text-transform: uppercase;
   color: #8e793e;
@@ -41,7 +42,7 @@
 }
 .about-title h2 {
   /* text-transform: uppercase; */
-  font-size: 60px;
+  font-size: 50px;
   font-weight: 500;
   color: #ffffff;
   line-height: 1.1;
@@ -62,6 +63,10 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
+}
+
+.about-button a{
+  text-decoration: none;
 }
 .about-button p {
   display: flex;
@@ -104,7 +109,7 @@
 
 .about-right img {
   width: 100%;
-  object-fit: contain;
+  object-fit: cover;
   aspect-ratio: 3/3;
 }
 
@@ -135,7 +140,6 @@
 }
 
 .row {
-    display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
@@ -150,9 +154,9 @@
     bottom: 0;
 }
 @media (min-width: 1200px) {
-  .about-main {
+  /* .about-main {
     max-width: 1140px;
-  }
+  } */
 
   .container {
     max-width: 1170px;
@@ -167,16 +171,17 @@
 }
 @media only screen and (max-width: 680px) {
   .about-main {
-    gap: 0;
-    /* display: block; */
-    padding-bottom: 10rem;
+    display: block;
+    padding: 3rem 0;
+    z-index: 3;
+    position: relative;
   }
 
   .about-gym{
     position: absolute;
     rotate: 90deg;
-    left: 0%;
-    top: 25%;
+    right: 34%;
+    top: 10%;
     color: #fffbee1f;
     font-size: 250px;
     font-weight: 900;
@@ -186,6 +191,8 @@
   .about-left,
   .about-right {
     width: 100%;
+    margin-left: 0;
+    margin-bottom: 20px;
   }
 
   .about-right {
@@ -194,12 +201,24 @@
     align-items: center;
     justify-content: center;
   }
+  .about-right img{
+    width: 100%;
+    object-fit: cover;
+  }
 
   .about-main {
     max-width: 520px;
   }
 
   .about_image img{
+    width: 100%;
+  }
+
+  .about-button a{
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .about-button a p{
     width: 100%;
   }
 }

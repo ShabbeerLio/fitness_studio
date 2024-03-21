@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import "./Navbar.css"
-// import Logo from "../../Assets/Logo.png"
+import Logo from "../../Assets/gym-logo.png"
 
 
 const Navbar = (props) => {
@@ -49,7 +49,7 @@ const Navbar = (props) => {
                     <nav className="row navbar navbar-expand-lg navbar-dark align-items-lg-end">
                         <div className="container-fluid">
                             <a className="navBar-logo" href="#home">
-                                {/* <img src={Logo} alt="" /> */}
+                                <img src={Logo} alt="" />
                             </a>
                             <button className="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                 <span className="toggler-icon top-bar"></span>
