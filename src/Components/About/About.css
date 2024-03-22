@@ -15,7 +15,7 @@
   gap: 2rem;
 }
 
-.about-gym{
+.about-gym {
   position: absolute;
   rotate: 90deg;
   left: -15%;
@@ -27,7 +27,7 @@
 }
 
 .about-left {
-    z-index: 3;
+  z-index: 3;
   width: 50%;
   padding: 0px 15px;
   margin-left: 10%;
@@ -58,14 +58,13 @@
   color: gray;
 }
 
-
 .about-button {
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
 
-.about-button a{
+.about-button a {
   text-decoration: none;
 }
 .about-button p {
@@ -114,44 +113,44 @@
 }
 
 .about_background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transform-origin: bottom right;
-    transform: rotate(-8deg);
-    background: #000000;
-    z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: bottom right;
+  transform: rotate(-8deg);
+  background: #000000;
+  z-index: 2;
 }
 
 .about_background::before {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 150%;
-    height: 100%;
-    background: #000000;
-    content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 150%;
+  height: 100%;
+  background: #000000;
+  content: "";
 }
 
 .fill_height {
-    height: 100%;
+  height: 100%;
 }
 
 .row {
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
 }
 
 .about_image {
-    position: absolute;
-    right: 0%;
-    /* transform: translateX(-50%); */
-    bottom: 0;
+  position: absolute;
+  right: 0%;
+  /* transform: translateX(-50%); */
+  bottom: 0;
 }
 @media (min-width: 1200px) {
   /* .about-main {
@@ -160,14 +159,17 @@
 
   .container {
     max-width: 1170px;
-}
+  }
 }
 
 @media only screen and (max-width: 990px) {
-  .about-main {
+  /* .about-main {
     max-width: 720px;
-  }
+  } */
 
+  .about-left {
+    margin-left: 5%;
+  }
 }
 @media only screen and (max-width: 680px) {
   .about-main {
@@ -177,7 +179,7 @@
     position: relative;
   }
 
-  .about-gym{
+  .about-gym {
     position: absolute;
     rotate: 90deg;
     right: 34%;
@@ -201,7 +203,7 @@
     align-items: center;
     justify-content: center;
   }
-  .about-right img{
+  .about-right img {
     width: 100%;
     object-fit: cover;
   }
@@ -210,15 +212,15 @@
     max-width: 520px;
   }
 
-  .about_image img{
+  .about_image img {
     width: 100%;
   }
 
-  .about-button a{
+  .about-button a {
     width: 100%;
     margin-bottom: 50px;
   }
-  .about-button a p{
+  .about-button a p {
     width: 100%;
   }
 }

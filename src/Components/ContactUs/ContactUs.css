@@ -68,6 +68,9 @@ background: radial-gradient(circle, rgba(34,25,0,1) 0%, rgba(0,0,0,1) 100%);
   width: 100%;
 }
 
+.form-message p{
+  color: white;
+}
 /* .contactUs-left {
   color: white;
   width: 50%;

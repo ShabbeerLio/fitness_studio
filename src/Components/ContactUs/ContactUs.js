@@ -1,8 +1,72 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import "./ContactUs.css"
 import ScrollReveal from 'scrollreveal'
+import emailjs from '@emailjs/browser';
 
 const ContactUs = () => {
+
+    const form = useRef();
+
+    const [formData, setFormData] = useState({
+        user_name: '',
+        user_number: '',
+        user_email: '',
+        message: ''
+    });
+
+
+    // Handle input changes and update the formData state
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({
+            ...formData,
+            [name]: value
+        });
+    };
+
+    const [messageSent, setMessageSent] = useState(false); // Track whether the message has been sent
+
+
+    // Handle form submission
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        setMessageSent(true);
+
+        setTimeout(() => {
+            setMessageSent(false);
+        }, 2500);
+
+        emailjs.sendForm(
+            'service_4z683ph',
+            'template_c97o03n',
+            form.current,
+            'zNpQXL4_3yCdYGl0W'
+        )
+            .then((result) => {
+                console.log(result.text);
+                console.log("message sent")
+            }, (error) => {
+                console.log(error.text);
+            });
+
+        // Access the user's name, email, and message from the formData state
+        const { user_name, user_number, user_email, message } = formData;
+
+        console.log('Name:', user_name);
+        console.log('Number:', user_number);
+        console.log('Email:', user_email);
+        console.log('Message:', message);
+
+        setFormData({
+            user_name: '',
+            user_number: '',
+            user_email: '',
+            message: ''
+        });
+    };
+
+    // scroll
 
     useEffect(() => {
         const sr = ScrollReveal({
@@ -17,21 +81,7 @@ const ContactUs = () => {
         return () => sr.destroy();
     }, []);
 
-    const [name, setName] = useState('');
-    const [number, setNumber] = useState('');
-    const [email, setEmail] = useState('');
-    const [message, setMessage] = useState('');
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        // Handle form submission (e.g., send data to backend or display a message)
-        console.log({ name, number, email, message });
-        // Reset form fields
-        setName('');
-        setEmail('');
-        setNumber('');
-        setMessage('');
-    };
     return (
         <div className='contactUs'>
             {/* <div className="overlay"></div> */}
@@ -53,33 +103,57 @@ const ContactUs = () => {
                         <p><FaEnvelope/> Email: gym@example.com</p> */}
                     {/* </div> */}
                     {/* <div className="contactUs-right"> */}
-                    <form onSubmit={handleSubmit}>
-                        <div className="contact-form-box">
-                            <div className='input-box'>
-                                <label>Your Name</label>
-                                <input type="text" value={name} onChange={(e) => setName(e.target.value)} required />
-                            </div>
-                            <div className='input-box'>
-                                <label>Mobile Number</label>
-                                <input type="number" value={number} onChange={(e) => setNumber(e.target.value)} required />
-                            </div>
-                            <div className='input-box'>
-                                <label>Your Email Address</label>
-                                <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
-                            </div>
-                            <div className='input-box'>
-                                <label>Your Message</label>
-                                <textarea value={message} onChange={(e) => setMessage(e.target.value)} required />
-                            </div>
+                    {messageSent ? (
+                        <div className='form-message'>
+                            <p>Message sent successfully!</p>
                         </div>
-                        <div className="contact-form-box-button">
-                            <p>We do not sell, share, trade your information with anyone for any reason. We won’t give spam mails.</p>
-                            <button type="submit">
-                                <p>Send Message</p>
-                            </button>
-                        </div>
-                    </form>
-                    {/* </div> */}
+                    ) : (
+                        <form ref={form} onSubmit={handleSubmit}>
+                            <div className="contact-form-box">
+                                <div className='input-box'>
+                                    <label>Your Name</label>
+                                    <input
+                                        name="user_name"
+                                        type="text"
+                                        value={formData.name}
+                                        onChange={handleInputChange} required
+                                    />
+                                </div>
+                                <div className='input-box'>
+                                    <label>Mobile Number</label>
+                                    <input
+                                        name="user_number"
+                                        type="number"
+                                        value={formData.number}
+                                        onChange={handleInputChange} required
+                                    />
+                                </div>
+                                <div className='input-box'>
+                                    <label>Your Email Address</label>
+                                    <input
+                                        name="user_email"
+                                        type="email"
+                                        value={formData.email}
+                                        onChange={handleInputChange} required
+                                    />
+                                </div>
+                                <div className='input-box'>
+                                    <label>Your Message</label>
+                                    <textarea
+                                        name="message"
+                                        value={formData.message}
+                                        onChange={handleInputChange} required
+                                    />
+                                </div>
+                            </div>
+                            <div className="contact-form-box-button">
+                                <p>We do not sell, share, trade your information with anyone for any reason. We won’t give spam mails.</p>
+                                <button type="submit">
+                                    <p>Send Message</p>
+                                </button>
+                            </div>
+                        </form>
+                    )}
                 </div>
             </div>
         </div>
