@@ -28,20 +28,21 @@ const Enquiry = () => {
                         <p> Address: Jeevan Vihar, Mahindra Enclave, Shastri Nagar, Ghaziabad, Uttar Pradesh 201002</p>
                     </div>
                     <div className="enquiry-left-icon">
-                        <a href="tel:+917053054005">
+                        <a href="tel:07053054005">
                             <FaPhone />
-                            <p> Phone: +91 7053054005</p>
+                            <p> Phone:7053054005</p>
                         </a>
                     </div>
                     <div className="enquiry-left-icon">
                         <a href="mailto:.com">
                             <FaEnvelope />
-                            <p> Email: gym@example.com</p>
+                            <p> Email: muscleheavengym@gmail.com</p>
                         </a>
                     </div>
                     <div className="enquiry-left-icon">
                         <FaClock />
-                        <p> Time: 8:00 - 22:00 Mon-Sat</p>
+                        <p> 5:00 A.M - 11:00 A.M (Mon - Sat)</p>
+                        <p> 5:00 P.M - 11:00 P.M (Mon - Sat)</p>
                     </div>
                     <div className="enquiry-left-icon">
                         <a href="https://instagram.com/_muscleheavengym_/?igsh=MTB2cWp5ODdtNnhwbA%3D%3D">

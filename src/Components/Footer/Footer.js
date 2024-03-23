@@ -54,8 +54,8 @@ const Footer = (props) => {
                             </svg>
                         </div>
                         <p>
-                            <a href="tel: +917053054005">
-                            +91 7053054005
+                            <a href="tel: 07053054005">
+                           7053054005
                         </a></p>
                     </div>
                     <div className="instagram">
