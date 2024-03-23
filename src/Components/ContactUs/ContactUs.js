@@ -111,7 +111,7 @@ const ContactUs = () => {
                         <form ref={form} onSubmit={handleSubmit}>
                             <div className="contact-form-box">
                                 <div className='input-box'>
-                                    <label>Your Name</label>
+                                    <label>Name</label>
                                     <input
                                         name="user_name"
                                         type="text"
@@ -120,7 +120,7 @@ const ContactUs = () => {
                                     />
                                 </div>
                                 <div className='input-box'>
-                                    <label>Mobile Number</label>
+                                    <label>Number</label>
                                     <input
                                         name="user_number"
                                         type="number"
@@ -129,7 +129,7 @@ const ContactUs = () => {
                                     />
                                 </div>
                                 <div className='input-box'>
-                                    <label>Your Email Address</label>
+                                    <label>Email </label>
                                     <input
                                         name="user_email"
                                         type="email"
@@ -138,7 +138,7 @@ const ContactUs = () => {
                                     />
                                 </div>
                                 <div className='input-box'>
-                                    <label>Your Message</label>
+                                    <label>Message</label>
                                     <textarea
                                         name="message"
                                         value={formData.message}
@@ -147,7 +147,7 @@ const ContactUs = () => {
                                 </div>
                             </div>
                             <div className="contact-form-box-button">
-                                <p>We do not sell, share, trade your information with anyone for any reason. We won’t give spam mails.</p>
+                                {/* <p>We do not sell, share, trade your information with anyone for any reason. We won’t give spam mails.</p> */}
                                 <button type="submit">
                                     <p>Send Message</p>
                                 </button>

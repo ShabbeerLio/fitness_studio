@@ -77,6 +77,13 @@
   margin-right: 15px;
   margin-top: 5px;
 }
+.enquiry-left-icon :first-child svg{
+  font-size: 30px;
+}
+
+.enquiry-time p{
+  margin: 0;
+}
 
 @media (min-width: 1200px) {
   .Enquiry-main {

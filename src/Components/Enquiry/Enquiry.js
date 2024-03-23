@@ -25,34 +25,37 @@ const Enquiry = () => {
                 <div className="enquiry-left">
                     <div className="enquiry-left-icon">
                         <FaLocationDot />
-                        <p> Address: Jeevan Vihar, Mahindra Enclave, Shastri Nagar, Ghaziabad, Uttar Pradesh 201002</p>
+                        <p>Mahindra enclave D-212, Near Silver Shine School, Ghaziabad 201001</p>
                     </div>
                     <div className="enquiry-left-icon">
                         <a href="tel:07053054005">
                             <FaPhone />
-                            <p> Phone:7053054005</p>
+                            <p>7053054005</p>
                         </a>
                     </div>
                     <div className="enquiry-left-icon">
                         <a href="mailto:.com">
                             <FaEnvelope />
-                            <p> Email: muscleheavengym@gmail.com</p>
+                            <p>muscleheavengym@gmail.com</p>
                         </a>
                     </div>
                     <div className="enquiry-left-icon">
                         <FaClock />
-                        <p> 5:00 A.M - 11:00 A.M (Mon - Sat)</p>
-                        <p> 5:00 P.M - 11:00 P.M (Mon - Sat)</p>
+                        <div className="enquiry-time">
+                            <p> Morning 5:00 am - 11:00 am</p>
+                            <p>Evening 5:00 P.M - 11:00 P.M</p>
+                            <p>Sunday : OFF</p>
+                        </div>
                     </div>
-                    <div className="enquiry-left-icon">
+                    {/* <div className="enquiry-left-icon">
                         <a href="https://instagram.com/_muscleheavengym_/?igsh=MTB2cWp5ODdtNnhwbA%3D%3D">
                             < FaInstagram />
                             <p>_muscleheavengym_</p>
                         </a>
-                    </div>
+                    </div> */}
                 </div>
                 <div className="enquiry-right">
-                    
+
                 </div>
             </div>
         </div>
